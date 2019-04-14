@@ -25,3 +25,5 @@ RUN cd /lib/systemd/system/sysinit.target.wants/ && \
 
 RUN sed -ri /etc/systemd/journald.conf \
 			-e 's!^#?Storage=.*!Storage=volatile!'
+
+ENTRYPOINT ["/usr/lib/systemd/systemd"]
